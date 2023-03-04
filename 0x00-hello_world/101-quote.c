@@ -2,8 +2,8 @@
 #include <unistd.h>
 
 /**
- * main - print a line
- * Return 1 (Succss)
+ * main - a program that print a line using fputs
+ * Return: 1 (Succss)
  */
 
 int main(void)

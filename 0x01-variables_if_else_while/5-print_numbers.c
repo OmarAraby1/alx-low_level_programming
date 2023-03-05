@@ -9,11 +9,11 @@ int main(void)
 {
 	int x;
 
-	for (x == 0; x <= 9; x++)
+	for (int x == 0; x <= 9; x++)
 	{
-		printf(x);
+		printf("%d", x);
 	}
-	printf('\n');
+	putchar('\n');
 	return (0);
 }
 

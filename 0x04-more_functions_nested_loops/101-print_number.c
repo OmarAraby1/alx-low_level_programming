@@ -37,9 +37,9 @@ void print_number(int n)
 				coef = 10;
 				_putchar(frac % 10 + '0'); }
 		}
-		_putchar('\n'); }
+	}
 	else if (n == 0)
 	{
 		_putchar('0');
-		_putchar('\n'); }
+	}
 }

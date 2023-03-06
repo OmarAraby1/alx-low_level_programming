@@ -15,7 +15,7 @@ int main(void)
 			i = i / j;
 		}
 	}
-	printf("lu", j);
+	printf("%lu", j);
 	putchar('\n');
 	return (0);
 }

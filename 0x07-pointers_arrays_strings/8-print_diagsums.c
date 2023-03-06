@@ -12,15 +12,13 @@ void print_diagsums(int *a, int size)
 {
 	int i;
 	unsigned int count1, count2;
-	int x = size - 1;
 
 	count1 = 0;
 	count2 = 0;
 	for (i = 0; i < size; i++)
 	{
-		count1 += a[i][i];
-		count2 += a[i][x];
-		x = x - 1;
+		count1 += a[(size *i) + i];
+		count2 += a[(size * (i + 1)) - (i + 1)];
 	}
 	printf("%d, %d\n", count1, count2);
 }

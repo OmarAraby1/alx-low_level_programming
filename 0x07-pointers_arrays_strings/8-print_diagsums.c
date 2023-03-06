@@ -20,8 +20,5 @@ void print_diagsums(int *a, int size)
 		count2 += a[i][x];
 		x = x - 1;
 	}
-	_putchar(count1 + '0');
-	_putchar(',');
-	_putchar(' ');
-	_putchar(count2 + '0');
+	printf("%d, %d", count1, count2);
 }

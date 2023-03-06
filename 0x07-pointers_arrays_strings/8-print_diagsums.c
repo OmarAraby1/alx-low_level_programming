@@ -2,8 +2,7 @@
 #include <stdio.h>
 #include <unistd.h>
 /**
- * print_diagsums - prints the sum of the two diagonals of a 
- * square matrix of integers
+ * print_diagsums - prints the sum of the two diagonals
  * @a: array of interegrs
  * @size: size of array
  * Return: no return
@@ -17,7 +16,7 @@ void print_diagsums(int *a, int size)
 	count2 = 0;
 	for (i = 0; i < size; i++)
 	{
-		count1 += a[(size *i) + i];
+		count1 += a[(size * i) + i];
 		count2 += a[(size * (i + 1)) - (i + 1)];
 	}
 	printf("%d, %d\n", count1, count2);

@@ -6,10 +6,9 @@
 void print_number(int n)
 {
 	int i = 0;
-	int j;
+	int j, k, frac;
 	int temp = n;
 	int coef = 10;
-	int frac;
 
 	while (temp / 10 != 0)
 	{
@@ -20,6 +19,8 @@ void print_number(int n)
 	{
 		if (n < 0)
 		{
+			n = n * -1;
+			temp = temp * -1;
 			_putchar('-'); }
 		_putchar(temp + '0');
 		for (j = i; j > 0; j--)
@@ -36,7 +37,7 @@ void print_number(int n)
 				coef = 10;
 				_putchar(frac % 10 + '0'); }
 		}
-		_putchar('\n')'; }
+		_putchar('\n'); }
 	else if (n == 0)
 	{
 		_putchar('0');

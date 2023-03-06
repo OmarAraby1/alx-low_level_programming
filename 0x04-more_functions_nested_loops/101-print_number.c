@@ -21,7 +21,8 @@ void print_number(int n)
 		{
 			n = n * -1;
 			temp = temp * -1;
-			_putchar('-'); }
+			_putchar('-');
+		}
 		_putchar(temp + '0');
 		for (j = i; j > 0; j--)
 		{
@@ -32,10 +33,12 @@ void print_number(int n)
 			{
 				for (k = j; k > 2; k--)
 				{
-					coef = coef * 10; }
+					coef = coef * 10;
+				}
 				frac = n / coef;
 				coef = 10;
-				_putchar(frac % 10 + '0'); }
+				_putchar(frac % 10 + '0');
+			}
 		}
 	}
 	else if (n == 0)

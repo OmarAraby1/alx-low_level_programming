@@ -15,10 +15,7 @@ int primal(int x, int y)
 	{
 		return (0);
 	}
-	else if (x % y != 0)
-	{
-		return (primal(x, y - 1));
-	}
+	return (primal(x, y - 1));
 }
 
 /**

@@ -2,7 +2,7 @@
 /**
  * sqrt2 - find square root from b to a
  * @a: equals n
- * @b; counter from 1 to n
+ * @b: counter from 1 to n
  * Return: square root
  */
 int sqrt2(int a, int b)

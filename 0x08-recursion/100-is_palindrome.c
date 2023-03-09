@@ -11,7 +11,7 @@ int length_counter(char *str, int l)
 	{
 		return (l - 1);
 	}
-	return (length_counter(s + 1, l + 1));
+	return (length_counter(str + 1, l + 1));
 }
 
 /**

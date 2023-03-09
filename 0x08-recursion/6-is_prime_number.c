@@ -1,17 +1,21 @@
 #include "main.h"
 /**
- * primal - chaeck for primality
- * @x: input to be checked
+ * primal - checks for primality
+ * @x: checked integer
  * @y: counter
- * Return: 1 if prime, 0 otherwise
+ * Return: 1 or 0
  */
 int primal(int x, int y)
 {
-	if (y = 1)
+	if (y == 1)
 	{
 		return (1);
 	}
-	if (x % y != 0)
+	if (x % y == 0)
+	{
+		return (0);
+	}
+	else if (x % y != 0)
 	{
 		return (primal(x, y - 1));
 	}
@@ -24,6 +28,5 @@ int primal(int x, int y)
  */
 int is_prime_number(int n)
 {
-	int a = n;
-	return (primal(n, a - 1));
-}	
+	return (primal(n, n - 1));
+}

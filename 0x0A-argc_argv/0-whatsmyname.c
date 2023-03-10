@@ -1,6 +1,6 @@
 #include "main.h"
 /**
- * whatsmyname - prints the name of the function
+ * main - prints the name of the function
  * @argc: length of the array
  * @argv: array of inputs
  * Return: 0 Success

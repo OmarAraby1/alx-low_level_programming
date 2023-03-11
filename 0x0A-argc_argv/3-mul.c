@@ -42,9 +42,15 @@ int _atoi(char *s)
  */
 int main(int argc __attribute__((unused)), char **argv)
 {
-	int m1 = _atoi(argv[1]);
-	int m2 = _atoi(argv[2]);
+	int m1, m2;
 
+	if (argc < 3 || argc > 3)
+	{
+		printf("Error\n");
+		return (1);
+	}
+	m1 = _atoi(argv[1]);
+	m2 = _atoi(argv[2]);
 	printf("%d\n", m1 * m2);
 	return (0);
 }

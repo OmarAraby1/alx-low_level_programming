@@ -68,6 +68,7 @@ int main(int argc, char **argv)
 	if (x < 0)
 	{
 		printf("0\n");
+		return (0);
 	}
 	sum += x / 25;
 	ind = x % 25;

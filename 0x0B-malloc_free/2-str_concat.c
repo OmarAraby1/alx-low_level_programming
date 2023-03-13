@@ -25,7 +25,7 @@ int _sizes(char *s)
 char *str_concat(char *s1, char *s2)
 {
 	char *concated;
-	int size1, size2, size3, i, j;
+	int size1, size2, i, j;
 
 	if (s1 == NULL)
 	{

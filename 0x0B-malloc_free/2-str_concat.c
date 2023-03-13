@@ -42,16 +42,14 @@ char *str_concat(char *s1, char *s2)
 	{
 		return (NULL);
 	}
-	size3 = _sizes(concated);
 	for (i = 0; s1[i] != '\0'; i++)
 	{
-		concated[size3 + i] = s1[i];
+		concated[i] = s1[i];
 	}
-	size3 = _sizes(concated);
 	for (j = 0; s2[j] != '\0'; j++)
 	{
-		concated[size3 + j] = s2[j];
+		concated[size1 + j] = s2[j];
 	}
-	concated += '\0';
+	concated[size1 + size2] = '\0';
 	return (concated);
 }

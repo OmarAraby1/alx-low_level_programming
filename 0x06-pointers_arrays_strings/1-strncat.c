@@ -4,6 +4,7 @@
  * _strncat - limited concatination
  * @dest: concat to this
  * @src: concat from this
+ * @n: number of chars to concat
  * Return: pointer to result
  */
 
@@ -12,6 +13,7 @@ char *_strncat(char *dest, char *src, int n)
 	int i, j;
 
 	j = 0;
+	i = 0;
 	while (dest[i] != '\0')
 	{
 		i++;

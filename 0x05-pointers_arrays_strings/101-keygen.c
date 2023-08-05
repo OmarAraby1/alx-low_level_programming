@@ -15,12 +15,12 @@ int main(void)
 	srand(time(NULL));
 	for (i = 0; i < 20; i++)
 	{
-		pass[i] = rand() % 69;
+		pass[i] = rand() % 78;
 		sum += (pass[i] + '0');
 		_putchar(pass[i] + '0');
-		if ((4204 - sum) - '0' < 69)
+		if ((2772 - sum) - '0' < 78)
 		{
-			n = 4204 - sum - '0';
+			n = 2772 - sum - '0';
 			sum += n;
 			_putchar(n + '0');
 			break;

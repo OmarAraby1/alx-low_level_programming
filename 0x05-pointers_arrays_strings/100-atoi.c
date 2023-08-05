@@ -23,13 +23,12 @@ int _atoi(char *s)
 	{
 		if (s[i] == '-')
 		{
-			isneg = 1;
-			++i;
+			++isneg;
 		}
 		if (s[i] >= '0' && s[i] <= '9')
 		{
 			dig = s[i] - '0';
-			if (isneg == 1)
+			if (isneg % 2)
 			{
 				dig = -dig;
 			}

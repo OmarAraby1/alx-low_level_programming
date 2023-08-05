@@ -2,11 +2,11 @@
 #include <time.h>
 
 /**
- * keygen - generate random valid passwords
+ * main - generate random valid passwords
  * Return: 0 success
  */
 
-int keygen(void)
+int main(void)
 {
 	int pass[20];
 	int i, sum, n;

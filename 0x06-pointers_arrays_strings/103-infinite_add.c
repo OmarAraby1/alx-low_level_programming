@@ -1,14 +1,12 @@
 #include "main.h"
-
 /**
- * infinite_add - add two numbers inot limited buffer
- * @n1: first number
- * @n2 : second number
+ * infinite_add - add 2 strings.
+ * @n1: string1.
+ * @n2: string2.
  * @r: buffer
- * @size_r: size of buffer
- * Return: pointer to buffer
+ * @size_r: buffer size
+ * Return: String with all letters in ROT13 base.
  */
-
 char *infinite_add(char *n1, char *n2, char *r, int size_r)
 {
 	int a_len = 0, b_len = 0, carry = 0, a, b, sum, biggest;

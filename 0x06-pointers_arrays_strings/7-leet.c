@@ -10,8 +10,8 @@ char *leet(char *s)
 {
 	int i = 0;
 	int j = 0;
-	char main[] = {'a', 'A', 'e', 'E', 'o', 'O', 't', 'T', 'l', 'L'};
-	char code[] = {4, 4, 3, 3, 0, 0, 7, 7, 1, 1};
+	char main[] = "aAeEoOtTlL";
+	char code[] = "4433007711";
 
 	for (i; s[i] != '\0'; i++)
 	{

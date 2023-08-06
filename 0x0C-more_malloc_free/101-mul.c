@@ -1,4 +1,7 @@
 #include "main.h"
+#include <stdio.h>
+#include <stdlib.h>
+#include <limits.h>
 /**
  * main - multiplies two positive numbers
  * @argc: length of input
@@ -43,4 +46,12 @@ int main(int argc, char **argv)
 	{
 		return (1);
 	}
+	result = atol(argv[1]) * atol(argv[2]);
+	if (result == NULL)
+	{
+		free(result);
+		exit(98);
+	}
+	printf("%lu\n", mul);
+	return (0);
 }

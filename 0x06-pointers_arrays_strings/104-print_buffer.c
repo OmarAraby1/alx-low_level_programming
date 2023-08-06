@@ -2,7 +2,7 @@
 
 /**
  * print_buffer - print 10 bytes per line of a buffer
- * 		  shows content position and hex
+ * shows content position and hex
  * @b: the buffer
  * @size: size of content per line
  * Return: nothing

@@ -13,7 +13,7 @@ char *rot13(char *s)
 	char orig[] = "ABCDEFGHIJKLMNOPQRSTUVWXYZabcdefghijklmnopqrstuvwxyz";
 	char code[] = "NOPQRSTUVWXYZABCDEFGHIJKLMnopqrstuvwxyzabcdefghijklm";
 
-       while (s[i] != '\0')
+	while (s[i] != '\0')
 	{
 		for (; j < 52; j++)
 		{

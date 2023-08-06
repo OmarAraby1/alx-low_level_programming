@@ -1,12 +1,12 @@
 #include "main.h"
 
 /**
- * infinite_Add - adds two numbers to a buffer with limited size
- * @n1: fisrt number
- * @n2: second number
+ * infinite_add - add two numbers inot limited buffer
+ * @n1: first number
+ * @n2 : second number
  * @r: buffer
- * @size_r: buffer size
- * Return: pointer to the result
+ * @size_r: size of buffer
+ * Return: pointer to buffer
  */
 
 char *infinite_add(char *n1, char *n2, char *r, int size_r)
@@ -23,7 +23,8 @@ char *infinite_add(char *n1, char *n2, char *r, int size_r)
 		biggest = b_len;
 	if ((biggest + 1) >= size_r)
 		return (0);
-	r[biggest + 1] = '\0';	
+	r[biggest + 1] = '\0';
+	
 	while (biggest >= 0)
 	{
 		a = (n1[a_len - 1] - '0');
@@ -36,6 +37,7 @@ char *infinite_add(char *n1, char *n2, char *r, int size_r)
 			sum = a + carry;
 		else
 			sum = carry;
+		
 		if (sum > 9)
 		{
 			carry = sum / 10;

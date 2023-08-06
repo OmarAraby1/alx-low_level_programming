@@ -1,49 +1,50 @@
 #include "main.h"
+
 /**
- * infinite_add - add 2 strings
- * @n1: string1
- * @n2: string2
- * @r: buffer
+ * infinite_add - sum two integers into limited buffer
+ * @n1: first integer
+ * @n2: second integer
+ * @r: the buffer
  * @size_r: buffer size
- * Return: String with all letters in ROT13 base
+ * Return: pointer to the result
  */
 char *infinite_add(char *n1, char *n2, char *r, int size_r)
 {
-	int a_len = 0, b_len = 0, carry = 0, a, b, sum, biggest;
+	int i = 0, j = 0, k = 0;
+	int sum = 0;
+	int tens = 0;
+	int begin = 0;
+	int swap = 0;
 
-	while (n1[a_len] != '\0')
-		a_len++;
-	while (n2[b_len] != '\0')
-		b_len++;
-	biggest = (a_len > b_len) ? a_len : b_len;
-	if ((biggest + 1) >= size_r)
+	while (n1[i] != 0)/* A */
+		i++;
+	while (n2[j] != 0)
+		j++;
+	i--;/* C */
+	j--;
+	if (i > size_r || j > size_r)/* D */
 		return (0);
-	r[biggest + 1] = '\0';
-	while (biggest >= 0)
+	for ( ; k < size_r; i--, j--, k++)/* E */
 	{
-		a = (n1[a_len - 1] - '0');
-		b = (n1[b_len - 1] - '0');
-		if (a_len > 0 && b_len > 0)
-			sum = a + b + carry;
-		else if (a_len < 0 && b_len > 0)
-			sum = b + carry;
-		else if (a_len > 0 && b_len < 0)
-			sum = a + carry;
-		else
-			sum = carry;
-		if (sum > 9)
-			carry = sum / 10;
-			sum = (sum % 10) + '0';
-		else
-			carry = 0;
-			sum = sum + '0';
-		r[biggest] = sum;
-		a_len--;
-		b_len--;
-		biggest--;
+		sum = tens;
+		if (i >= 0)/* F */
+			sum += n1[i] - '0';
+		if (j >= 0)
+			sum += n2[j] - '0';
+		if (i < 0 && j < 0 && sum == 0)/* G */
+			break;
+		tens = sum / 10;/* H */
+		r[k] = sum % 10 + '0';
 	}
-	if (*(r) != 0)
-		return (r);
-	else
-		return (r + 1);
+	if (i >= 0 || j >= 0 || sum > 0)/* J */
+		return (0);
+	r[k] = '\0';/* K */
+	k--;
+	for ( ; begin < k; k--, begin++)/* I */
+	{
+		swap = r[k];
+		r[k] = r[begin];
+		r[begin] = swap;
+	}
+	return (r);
 }

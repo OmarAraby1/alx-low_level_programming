@@ -13,10 +13,10 @@ void print_number(int n)
 	int i = 0;
 	int dig, ds;
 
-	while (temp > 10)
+	while (temp >= 10)
 	{
 		temp /= 10;
-		nth += 1;
+		nth++;
 	}
 	ds = nth;
 	if (n < 0)
@@ -27,6 +27,7 @@ void print_number(int n)
 	while (i <= ds)
 	{
 		dig = n / pow(10, nth);
+		n -= n * pow(10, nth);
 		_putchar(dig + '0');
 		i++;
 		nth--;

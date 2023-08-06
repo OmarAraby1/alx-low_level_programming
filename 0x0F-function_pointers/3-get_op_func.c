@@ -1,5 +1,5 @@
 #include "3-calc.h"
-
+#include <string.h>
 /**
  * get_op_func - map tha operation with it's function
  * @s: the operation
@@ -20,7 +20,7 @@ int (*get_op_func(char *s))(int, int)
 
 	while (op_s[i].op)
 	{
-		if (op_s[i].op == *s)
+		if (strcmp(s, op_s[i].op) == 0)
 		{
 			return (op_s[i].f);
 		}

@@ -1,5 +1,5 @@
 #include "main.h"
-#include <math.h>
+
 /**
  * print_number - prints an integer.
  * @n: integer
@@ -11,7 +11,8 @@ void print_number(int n)
 	int temp = n;
 	int nth = 0;
 	int i = 0;
-	int dig, ds;
+	int dig;
+	int pow = 1;
 
 	while (temp >= 10)
 	{
@@ -24,12 +25,17 @@ void print_number(int n)
 		_putchar('-');
 		n = -n;
 	}
-	while (i <= ds)
+	while (i < nth)
 	{
-		dig = n / pow(10, nth);
-		n -= n * pow(10, nth);
+		pow *= 10;
+		i++;
+	}
+	while (i < nth)
+	{
+		dig = n / pow;
+		n -= n * pow;
 		_putchar(dig + '0');
 		i++;
-		nth--;
+		pow /= 10;
 	}
 }

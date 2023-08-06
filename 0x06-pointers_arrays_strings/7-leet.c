@@ -17,7 +17,7 @@ char *leet(char *s)
 	{
 		for (j; j < 10; j++)
 		{
-			if (s[i] = main[j])
+			if (s[i] == main[j])
 			{
 				s[i] = code[j];
 			}

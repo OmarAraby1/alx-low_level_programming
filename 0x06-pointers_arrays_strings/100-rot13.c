@@ -13,7 +13,7 @@ char *rot13(char *s)
 	char orig[] = "ABCDEFGHIJKLMNOPQRSTUVWXYZabcdefghijklmnopqrstuvwxyz";
 	char code[] = "NOPQRSTUVWXYZABCDEFGHIJKLMnopqrstuvwxyzabcdefghijklm";
 
-	for (; s[i] != '\0'; i++)
+       while (s[i] != '\0')
 	{
 		for (; j < 52; j++)
 		{
@@ -23,6 +23,7 @@ char *rot13(char *s)
 				break;
 			}
 		}
+		i++;
 	}
 	return (s);
 }

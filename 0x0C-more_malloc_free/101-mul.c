@@ -16,7 +16,7 @@ int main(int argc, char **argv)
 		exit(98);
 	}
 	str1 = argv[1];
-	str2 = srgv[2];
+	str2 = argv[2];
 	while (str1[i])
 	{
 		if (str1[i] < '0' || str1[i] > '9')

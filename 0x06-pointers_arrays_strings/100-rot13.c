@@ -15,11 +15,12 @@ char *rot13(char *s)
 
 	for (; s[i] != '\0'; i++)
 	{
-		for (j < 52)
+		for (;j < 52; j++)
 		{
 			if (s[i] == orig[j])
 			{
 				s[i] = code[j];
+				break;
 			}
 		}
 	}

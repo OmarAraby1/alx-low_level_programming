@@ -40,7 +40,7 @@ int main(int argc, char **argv)
 	f_from = open(argv[1], O_RDONLY);
 	f_to = open(argv[2], O_CREAT | O_WRONLY | O_TRUNC | O_APPEND, 0664);
 	err_out(f_from, f_to, argv);
-	while (nbytes = 1024)
+	while (nbytes == 1024)
 	{
 		nbytes = read(f_from, buffer, 1024);
 		if (nbytes == -1)

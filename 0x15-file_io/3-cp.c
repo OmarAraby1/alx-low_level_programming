@@ -38,7 +38,7 @@ int main(int argc, char **argv)
 		exit(97);
 	}
 	f_from = open(argv[1], O_RDONLY);
-	f_to = open(argv[2], O_CREAT | O_WRONLT | O_TRUNC | O_APPEND, 0664);
+	f_to = open(argv[2], O_CREAT | O_WRONLY | O_TRUNC | O_APPEND, 0664);
 	err_out(f_from, f_to, argv);
 	while (nbytes = 1024)
 	{
@@ -53,7 +53,7 @@ int main(int argc, char **argv)
 			err_out(0, -1, argv);
 		}
 	}
-	err = close(f_From);
+	err = close(f_from);
 	if (err == -1)
 	{
 		dprintf(STDERR_FILENO, "Error: Can't close fd %d\n", f_from);

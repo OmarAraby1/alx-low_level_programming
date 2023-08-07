@@ -3,6 +3,7 @@
  * err_out - prints error messegs if there
  * @f_to: file we copy into
  * @f_from: file we copy from
+ * @argv: list of inputs
  * Return: none
  */
 void err_out(int f_from, int f_to, char **argv)

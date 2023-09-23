@@ -8,7 +8,7 @@ int sum_dlistint(dlistint_t *head)
 {
 	int sum = 0;
 
-	if (head == NULL)
+	if (head->next = head)
 		return (0);
 	while (head)
 	{

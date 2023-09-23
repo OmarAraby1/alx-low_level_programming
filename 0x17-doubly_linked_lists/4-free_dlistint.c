@@ -6,7 +6,7 @@
  */
 void free_dlistint(dlistint_t *head)
 {
-	dlinstint_t *aux;
+	dlistint_t *aux;
 
 	aux = head;
 	while (head)

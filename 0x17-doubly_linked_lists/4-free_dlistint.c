@@ -6,8 +6,9 @@
  */
 void free_dlistint(dlistint_t *head)
 {
-	stack_t *aux;
+	dlinstint_t *aux;
 
+	aux = head;
 	while (head)
 	{
 		aux = head->next;
